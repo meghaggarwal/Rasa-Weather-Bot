@@ -40,9 +40,28 @@ Chatbot built using Rasa framework that let users know the weather conditions ov
  
  #### How to give user input to bot?
  
- For testing purpose you can run the chatbot on terminal. Replace step 4 with `rasa shell`
+Option - 1 - For testing purpose you can run the chatbot on terminal. Replace step 4 with `rasa shell`
  This will run your rasa server as well as accept user input shell.
  
  For Reference - 
  
  ![Sample Image](https://github.com/meghaggarwal/Rasa-Weather-Bot/blob/main/Weather%20Chat%20Sample.png)
+ 
+ Option 2 - You can use REST API endpoints to integrate it with your website as custom webhooks.
+ 
+ 1. Create a python file - `testRasa.py`
+ 
+    Paste the following code snippet -
+
+      ```python
+      import requests
+      import json
+
+      payload = {'sender': 'test_user', 'message': "Hello"}
+      response = requests.post('http://localhost:5005/webhooks/rest/webhook', data = json.dumps(payload))
+      resp = response.json()
+      print(resp[0]['text'])
+      ```
+
+2. Run `python testRasa.py`. You will see the output in the terminal.
+
