@@ -1,0 +1,46 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_temperature
+  - action: action_weather
+  - action: utter_did_that_help
+  - checkpoint: ask_feedback
+
+- story: happy path 2
+  steps:
+  - intent: no_location_weather
+  - action: utter_location
+  - intent: ask_temperature
+  - action: action_weather
+  - action: utter_did_that_help
+  - checkpoint: ask_feedback
+
+- story: found helpful
+  steps:
+  - checkpoint: ask_feedback
+  - intent: affirm
+  - action: action_feedback
+  - slot_was_set:
+    - feedback: True
+  - action: utter_happy
+
+- story: did not found helpful
+  steps:
+  - checkpoint: ask_feedback
+  - intent: deny
+  - action: action_feedback
+  - slot_was_set:
+    - feedback: False
+  - action: utter_say_feedback
+
+- story: Greet user anytime the user says name 
+  steps:
+  - intent: tell_name
+  - action: action_greet_name
+
+

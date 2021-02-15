@@ -1,0 +1,163 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - yes obviously
+    - yo
+    - yes for sure
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - nope
+    - not
+    - no way
+    - not really
+    - not much
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - I am well
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - who are you?
+    - what can you do?
+    - tell me about you
+    - who made you
+    - how can you help me?
+    - I need your help
+    - what are you up to?
+    - your introduction?
+
+- intent: ask_temperature
+  examples: |
+    - What is the temperature in [delhi](GPE)?
+    - Tell me the current temperature in [lucknow](GPE)?
+    - I want to know weather in [noida](GPE)?
+    - Today weather in [bangalore](GPE)?
+    - How hot it is in (delhi)[GPE] today?
+    - How cold in (bangalore)[GPE] ?
+    - at (London)[GPE]
+    - (Kolkata)[GPE]?
+    - I am going outside today, what is the temperature in [Berlin](GPE)?
+    - in [UK](GPE)?
+    - What the weather feels like in [goa](GPE)?
+    - about [japan](GPE)?
+    - What the air feels in [shimla](GPE)?
+    - [budapest](GPE)?
+    - temperature in [finland](GPE)
+    - Will the weather fine in [mizoram](GPE)
+    - [saharanpur](GPE) temperature now
+    
+- intent: no_location_weather
+  examples: |
+    - What is the weather now?
+    - Tell me the temperature today?
+    - Weather right now
+    - temperature at the moment
+    - Present weather
+    - Present temperature
+    - Can you show me temperature
+    - is it sunny now?
+    - is the sky clear?
+    - will it rain today?
+
+- intent: tell_name
+  examples: |
+    - My name is [Sara](PERSON)
+    - [Mohan](PERSON) here
+    - [Stancy](PERSON) this side
+    - I am [lucy](PERSON)
+    - Call me [Juliet](PERSON)
+    - My name is [Sam](PERSON)
+    - I am [Timothy](PERSON)
+    - Myself [Jim](PERSON)
+    - [dennis](PERSON) here
+
+- intent: say_thanks
+  examples: |
+    - Thanks a ton
+    - Thanks 
+    - very much thank you
+    - this was useful
+    - I appreciate your answers
+    - this is awesome, thanks
+    - Thank you
+    
+
+
+
